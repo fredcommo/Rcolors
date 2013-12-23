@@ -1,3 +1,5 @@
+var linkFile="https://raw.github.com/fredcommo/Rcolors/master/rcolors.json"
+
 //Width and height for the drawing window
 var w = 1500,
     h = 900,
@@ -6,7 +8,8 @@ var w = 1500,
     yTicks = 5; //Set rough # of ticks
 
 // Load data from the same dir 
-d3.json("./rcolors.json", function(error, json){
+//d3.json("rcolors.json", function(error, json){
+d3.json(linkFile, function(error, json){
     var dataset = json;
 
     var minDat = d3.min(d3.values(dataset)),
